@@ -19,8 +19,10 @@ const CarouselItem: React.FC<ICarouselItem> = ({
           src={imagePath}
           alt="Component2-Image01"
           style={{ verticalAlign: "bottom" }}
-          width={384}
-          height={290}
+          width={0}
+          height={0}
+          sizes="100vw"
+          className={styles.component02__carouselItem_image}
           priority
         />
       </div>

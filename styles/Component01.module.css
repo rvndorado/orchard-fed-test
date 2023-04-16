@@ -7,10 +7,20 @@
   font-family: "OpenSans-Light";
 }
 
+.component01__column1_image {
+  width: 384px;
+  height: 600px;
+}
+
 .component01__column2 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.component01__column2_image {
+  width: 384px;
+  height: 290px;
 }
 
 .component01__column2_header {
@@ -25,19 +35,102 @@
 .component01__column2_firstParagraph {
   line-height: 35px;
   margin-bottom: 30px;
+  color: #a3a4a4;
 }
 
 .component01__column2_subheader {
   color: red;
   padding: 5px 0 10px 0;
+  font-family: "OpenSans-SemiBold";
 }
 
 .component01__column2_secondParagraph {
   line-height: 30px;
+  font-family: "OpenSans-SemiBold";
 }
-
 
 .component01__column3 {
   width: 384px;
   height: 600px;
+}
+
+/* Laptop */
+@media (min-width: 770px) and (max-width: 1120px) {
+  .component01 {
+    font-size: 14px;
+  }
+  .component01__column1_image {
+    width: 250px;
+    height: 450px;
+  }
+
+  .component01__column2_image {
+    width: 250px;
+    height: 225px;
+  }
+
+  .component01__column2_header {
+    font-size: 18px;
+  }
+
+  .component01__column3 {
+    height: 450px;
+  }
+}
+
+/* Tablet */
+
+@media (min-width: 320px) and (max-width: 800px) {
+  .component01 {
+    font-size: 12px;
+    gap: 20px;
+  }
+  .component01__column1_image {
+    width: 225px;
+    height: 360px;
+  }
+
+  .component01__column2_image {
+    width: 225px;
+    height: 170px;
+  }
+
+  .component01__column2_header {
+    font-size: 18px;
+  }
+
+  .component01__column3 {
+    max-height: 360px;
+    max-width: 225px;
+  }
+
+  .component01__column2_firstParagraph {
+    line-height: 22px;
+    margin-bottom: 25px;
+  }
+
+  .component01__column2_secondParagraph {
+    line-height: 17px;
+  }
+}
+
+/* Mobile */
+@media (min-width: 320px) and (max-width: 425px) {
+  .component01 {
+    flex-flow: wrap;
+  }
+  .component01__column1_image {
+    width: 80vw;
+    height: auto;
+  }
+
+  .component01__column2_image {
+    width: 80vw;
+    height: auto;
+  }
+
+  .component01__column3 {
+    min-width: 80vw;
+    min-height: auto;
+  }
 }

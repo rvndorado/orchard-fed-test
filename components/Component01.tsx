@@ -8,23 +8,29 @@ const Component01: React.FC = () => {
         <Image
           src="/assets/component-01/Image-01@2x.jpg"
           alt="Image01"
-          width={384}
-          height={600}
+          width={0}
+          height={0}
+          sizes="100vw"
+          className={styles.component01__column1_image}
           priority
         />
         <div className={styles.component01__column2}>
           <Image
             src="/assets/component-01/Image-02@2x.jpg"
             alt="Image02"
-            width={384}
-            height={290}
+            width={0}
+            height={0}
+            sizes="100vw"
+            className={styles.component01__column2_image}
             priority
           />
           <Image
             src="/assets/component-01/Image-03@2x.jpg"
-            alt="Image02"
-            width={384}
-            height={290}
+            alt="Image03"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className={styles.component01__column2_image}
             priority
           />
         </div>

@@ -45,6 +45,11 @@
   src: url(../public/assets/fonts/OpenSans/OpenSans-Light.ttf);
 }
 
+@font-face {
+  font-family: OpenSans-SemiBold;
+  src: url(../public/assets/fonts/OpenSans/OpenSans-SemiBold.ttf);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
