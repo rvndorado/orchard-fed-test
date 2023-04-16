@@ -21,6 +21,7 @@
 .component01__column2_image {
   width: 384px;
   height: 290px;
+  cursor: pointer;
 }
 
 .component01__column2_header {

@@ -30,6 +30,7 @@
   border-bottom: 5px solid red;
   width: 384px;
   height: 290px;
+  cursor: pointer;
 }
 
 .component02__carouselItem_header {

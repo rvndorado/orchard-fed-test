@@ -1,10 +1,22 @@
+import { useState } from "react";
+import { Lightbox } from "react-modal-image";
 import Image from "next/image";
 import styles from "@/styles/Component01.module.css";
 
 const Component01: React.FC = () => {
+  const [isLightboxOpen, setLightboxOpen] = useState<boolean>(false);
+  const [lightboxURL, setLightboxURL] = useState<string>("");
   return (
     <>
       <div className={styles.component01}>
+        {isLightboxOpen && (
+          <Lightbox
+            medium={lightboxURL}
+            large={lightboxURL}
+            alt="Image Preview!"
+            onClose={() => setLightboxOpen(false)}
+          />
+        )}
         <Image
           src="/assets/component-01/Image-01@2x.jpg"
           alt="Image01"
@@ -13,6 +25,10 @@ const Component01: React.FC = () => {
           sizes="100vw"
           className={styles.component01__column1_image}
           priority
+          onClick={() => {
+            setLightboxURL("/assets/component-01/Image-01@2x.jpg");
+            setLightboxOpen(true);
+          }}
         />
         <div className={styles.component01__column2}>
           <Image
@@ -23,6 +39,10 @@ const Component01: React.FC = () => {
             sizes="100vw"
             className={styles.component01__column2_image}
             priority
+            onClick={() => {
+              setLightboxURL("/assets/component-01/Image-02@2x.jpg");
+              setLightboxOpen(true);
+            }}
           />
           <Image
             src="/assets/component-01/Image-03@2x.jpg"
@@ -32,6 +52,10 @@ const Component01: React.FC = () => {
             sizes="100vw"
             className={styles.component01__column2_image}
             priority
+            onClick={() => {
+              setLightboxURL("/assets/component-01/Image-03@2x.jpg");
+              setLightboxOpen(true);
+            }}
           />
         </div>
         <div className={styles.component01__column3}>

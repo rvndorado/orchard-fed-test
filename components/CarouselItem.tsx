@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Lightbox } from "react-modal-image";
 import Image from "next/image";
 import styles from "@/styles/Component02.module.css";
 
@@ -12,9 +14,19 @@ const CarouselItem: React.FC<ICarouselItem> = ({
   header,
   details,
 }) => {
+  const [isLightboxOpen, setLightboxOpen] = useState<boolean>(false);
+  const [lightboxURL, setLightboxURL] = useState<string>("");
   return (
     <div className={styles.component02__carouselItem}>
       <div className={styles.component02__carouselItem_image}>
+        {isLightboxOpen && (
+          <Lightbox
+            medium={lightboxURL}
+            large={lightboxURL}
+            alt="Image Preview!"
+            onClose={() => setLightboxOpen(false)}
+          />
+        )}
         <Image
           src={imagePath}
           alt="Component2-Image01"
@@ -22,6 +34,10 @@ const CarouselItem: React.FC<ICarouselItem> = ({
           width={0}
           height={0}
           sizes="100vw"
+          onClick={() => {
+            setLightboxURL(imagePath);
+            setLightboxOpen(true);
+          }}
           className={styles.component02__carouselItem_image}
           priority
         />
