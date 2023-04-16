@@ -1,0 +1,43 @@
+.component01 {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-family: "OpenSans-Light";
+}
+
+.component01__column2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.component01__column2_header {
+  font-size: 26px;
+  padding: 5px 0 10px 0;
+}
+
+.component01 hr {
+  margin-bottom: 20px;
+}
+
+.component01__column2_firstParagraph {
+  line-height: 35px;
+  margin-bottom: 30px;
+}
+
+.component01__column2_subheader {
+  color: red;
+  padding: 5px 0 10px 0;
+}
+
+.component01__column2_secondParagraph {
+  line-height: 30px;
+}
+
+
+.component01__column3 {
+  width: 384px;
+  height: 600px;
+}
